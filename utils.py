@@ -17,3 +17,13 @@ def read_txt_lines(path):
         data.append(line.strip())
 
     return data
+
+def read_txt_lines_sep_int(path):
+    file = open(path, 'r')
+    lines = file.readlines()
+
+    data = []
+    for line in lines:
+        data.append([int(s) for s in line.strip()])
+
+    return data
