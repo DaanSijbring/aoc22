@@ -18,6 +18,16 @@ def read_txt_lines(path):
 
     return data
 
+def read_txt_lines_sep(path, seperator):
+    file = open(path, 'r')
+    lines = file.readlines()
+
+    data = []
+    for line in lines:
+        data.append(line.strip().split(seperator))
+
+    return data
+
 def read_txt_lines_sep_int(path):
     file = open(path, 'r')
     lines = file.readlines()
